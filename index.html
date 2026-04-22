@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ✅ SEO Title -->
+    <title>PIN Hunt 🎯 - 4 Digit Number Guessing Game</title>
+
+    <!-- ✅ Meta Description -->
+    <meta
+      name="description"
+      content="Play PIN Hunt - a fun 4 digit number guessing game with OTP style input, auto submit, confetti effects and interactive UI. Try your luck and crack the code!"
+    />
+
+    <!-- ✅ Keywords-->
+    <meta
+      name="keywords"
+      content="pin game, pin hunt, game, number guessing game, otp input game, javascript game, crack the code game"
+    />
+
+    <!-- ✅ Author -->
+    <meta name="author" content="Apurv | WebDevZone" />
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/Pin_Hunt.png" />
+
+    <!-- ✅ CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1>PIN Hunt 🎯</h1>
+
+      <!-- OTP INPUT -->
+      <div class="otpBox">
+        <input type="text" maxlength="1" class="digit" />
+        <input type="text" maxlength="1" class="digit" />
+        <input type="text" maxlength="1" class="digit" />
+        <input type="text" maxlength="1" class="digit" />
+      </div>
+
+      <div class="buttons">
+        <button id="reset">Reset</button>
+        <button id="submit">Submit</button>
+      </div>
+
+      <div class="result">
+        <p class="win">🎉 You Win!</p>
+        <p class="lose">😢 Try Again</p>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toastBox"></div>
+
+    <!-- Confetti -->
+    <canvas id="confetti"></canvas>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

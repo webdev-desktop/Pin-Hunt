@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* CARD */
+.card {
+  width: min(90%, 420px);
+  padding: clamp(20px, 4vw, 35px);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* OTP INPUT */
+.otpBox {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.digit {
+  width: clamp(45px, 10vw, 60px);
+  height: clamp(45px, 10vw, 60px);
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: black;
+  color: white;
+}
+
+#submit:hover {
+  background-color: #4caf50;
+}
+
+/* RESULT */
+.result {
+  margin-top: 20px;
+}
+
+.win,
+.lose {
+  display: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.win {
+  background: #4caf50;
+  color: white;
+}
+.lose {
+  background: #ff4d4d;
+  color: white;
+}
+
+/* TOAST */
+#toastBox {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toast {
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: white;
+  animation: slide 0.3s ease;
+}
+
+.toast.success {
+  background: #4caf50;
+}
+.toast.error {
+  background: #ff4d4d;
+}
+.toast.warning {
+  background: #ff9800;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* CONFETTI */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
